@@ -1,0 +1,33 @@
+Usage:
+1.Extract ex3_files.tar to the same folder that Matrix.hpp is.
+2.Create a folder named SchoolSol at the same folder as Matrix.hpp is and 
+extract ex3_schoolSol.tar in it.
+3.Run python TestsGenerator.py <num of int tests> <num of double tests> <num of complex tests>
+to create random tests(You can change the values of the dimensions at the TestsGenerator.py).
+4.Run make Test
+5.Run ./Test
+
+3 Folders will be created UserSol/TestsSol SchoolSol/TestsSol and SolDiff.
+each one of them contains files named by the next format <Type>_<Operation number>_<Test number>.
+
+Note:
+In case that the GenericMatrixDriver will assert you will be informed and the test will be counted as PASSED.
+
+Bonus:
++----------+------------------------+----------------------------+
+|          |         small          |            big             |
+|          |                        |                            |
+|          |                        |                            |
++----------------------+--------------------------+--------------+
+|          |           |            |             |              |
+|          |           |            |             |              |
+|          |           |            |             |              |
++----------------------------------------------------------------+
+|          |           |            |             |              |
+| Parallel |           |            |             |              |
+|          |           |            |             |              |
++----------------------------------------------------------------+
+|          |           |            |             |              |
+|Sequential|           |            |             |              |
+|          |           |            |             |              |
++----------+-----------+------------+-------------+--------------+

@@ -1,0 +1,27 @@
++----------+------------------------+----------------------------+
+|          |          big           |           small            |
+|          |                        |                            |
+|          |                        |                            |
++----------------------+--------------------------+--------------+
+|          |           |            |             |              |
+|          |     *     |     +      |      *      |      +       |
+|          |           |            |             |              |
++----------------------------------------------------------------+
+|          |           |            |             |              |
+| Parallel |4.16924sec |2.39118sec  |5.9513e-05sec|0.000155487sec|
+|          |           |            |             |              |
++----------------------------------------------------------------+
+|          |           |            |             |              |
+|Sequential|29.2892sec |0.0165077sec|1.169e-06sec |9.13e-07sec   |
+|          |           |            |             |              |
++----------+-----------+------------+-------------+--------------+
+
+1)There is a difference between the two sets, the smaller one runs alot faster,
+moreover relativly the paralellism works alot better on the big file(even that in the + operation
+it takes more than the sequential, but relativly).This caused by that the overhead of switching
+threads is realtivly more significant at the small file.
+
+2)There is a difference between the operations, the sum is faster on the sequential timing.
+It caused by that the sum is alot faster so the overhead of switching threads is relativly more
+significant, that is to say at the multipication the time gained by the
+parallel computing is more than the time lost by switching threads.
